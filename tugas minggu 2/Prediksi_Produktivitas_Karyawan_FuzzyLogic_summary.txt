@@ -1,0 +1,63 @@
+Project: Prediksi Produktivitas Karyawan Menggunakan Fuzzy Logic – Employee Dataset
+
+Deskripsi Singkat:
+Proyek ini bertujuan untuk memprediksi tingkat produktivitas karyawan (rendah, sedang, tinggi) berdasarkan faktor kepuasan kerja dan umpan balik menggunakan pendekatan Fuzzy Logic. Metode fuzzy dipilih karena mampu menangani ketidakpastian dalam penilaian kinerja karyawan, seperti variasi kepuasan dan persepsi terhadap beban kerja.
+
+Langkah-Langkah Pengerjaan:
+1. Import Dataset dan Library
+   - Dataset: employee productivity and satisfaction.csv
+   - Library: numpy, pandas, matplotlib, skfuzzy
+   - Tujuan: memuat data dan menyiapkan alat analisis fuzzy.
+
+2. Pemilihan Fitur Utama
+   - Kolom yang digunakan: Satisfaction Rate (%), Feedback Score, Productivity (%)
+   - Alasan: ketiga variabel ini paling berpengaruh terhadap performa kerja.
+
+3. Pembersihan dan Normalisasi Data
+   - Menghapus nilai kosong dan mengonversi data ke bentuk numerik.
+   - Normalisasi dilakukan agar rentang data sesuai dengan fungsi keanggotaan fuzzy.
+
+4. Definisi Membership Function
+   - Variabel Input:
+     - Satisfaction Rate: Rendah, Sedang, Tinggi
+     - Feedback Score: Buruk, Cukup, Bagus
+   - Variabel Output:
+     - Predicted Productivity: Rendah, Sedang, Tinggi
+   - Fungsi keanggotaan menggunakan trapmf dan trimf agar perubahan antar kategori lebih halus.
+
+5. Pembuatan Fuzzy Rules
+   - Contoh aturan:
+     - Jika Satisfaction tinggi dan Feedback bagus, maka Productivity tinggi.
+     - Jika Satisfaction rendah dan Feedback buruk, maka Productivity rendah.
+     - Jika Satisfaction sedang, maka Productivity sedang.
+
+6. Proses Inferensi Fuzzy
+   - Menghitung tingkat keanggotaan tiap aturan.
+   - Melakukan agregasi hasil dan defuzzifikasi (centroid method) untuk mendapatkan nilai produktivitas prediksi.
+
+7. Penambahan Kolom Insight
+   - Predicted Productivity: hasil prediksi fuzzy.
+   - Insight Perbandingan Kinerja (Real vs Predicted): menunjukkan apakah karyawan overperforming, aligned, atau underperforming.
+   - Employee Insight: menunjukkan status engagement (Highly Engaged, Moderate Performer, At Risk).
+
+8. Visualisasi Data
+   - Plot distribusi:
+     - Satisfaction Rate (%)
+     - Productivity (Real)
+     - Predicted Productivity (Fuzzy)
+     - Perbandingan Real vs Predicted dalam satu grafik garis.
+
+Tools & Library:
+- Python 3.11+
+- NumPy
+- Pandas
+- Matplotlib
+- Scikit-Fuzzy
+
+Output:
+- Dataset hasil fuzzy dengan kolom tambahan: Predicted Productivity, Employee Insight, Insight Perbandingan Kinerja.
+- Grafik distribusi dan perbandingan hasil fuzzy.
+- Interpretasi performa karyawan berdasarkan hasil prediksi.
+
+Kesimpulan:
+Pendekatan Fuzzy Logic berhasil digunakan untuk memprediksi produktivitas karyawan berdasarkan tingkat kepuasan dan umpan balik. Hasil menunjukkan bahwa semakin tinggi kepuasan dan skor feedback, semakin besar kemungkinan produktivitas karyawan masuk kategori tinggi. Analisis ini juga memberikan insight tambahan seperti karyawan yang berisiko rendah performa, atau justru melebihi ekspektasi model.

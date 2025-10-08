@@ -1,0 +1,11 @@
+Name,Age,Gender,Projects Completed,Productivity (%),Satisfaction Rate (%),Feedback Score,Department,Position,Joining Date,Salary,Predicted Productivity,Productivity Category
+Emily Palmer,26,Male,10,95,100,1.5,IT,Junior Developer,Jan-21,59502,88.33333333333333,High
+Michelle Perez,29,Male,5,93,94,4.9,Marketing,Junior Developer,Jan-18,57478,88.33333333333333,High
+Donald Davis,25,Female,2,15,97,1.8,HR,Intern,Jan-21,35169,88.33333333333333,High
+Kim Larson,25,Female,3,15,99,2.8,Marketing,Junior Developer,Jan-19,47322,88.33333333333333,High
+Kathryn Scott,42,Female,8,5,87,4.3,Sales,Senior Developer,Jan-09,80567,88.33333333333333,High
+Mark Wilson,57,Female,23,2,94,3.7,Sales,Manager,Jan-99,111381,88.33333333333333,High
+Patricia Campos,27,Female,3,18,89,2.6,HR,Junior Developer,Jan-18,54974,88.33333333333333,High
+Harold Nguyen,38,Male,22,37,95,2.2,Finance,Manager,Jan-10,116888,88.33333333333333,High
+Renee Jones,50,Female,16,54,93,3.0,IT,Team Lead,Jan-07,101416,88.33333333333333,High
+Calvin Mullen,49,Female,24,76,87,3.1,Marketing,Manager,Jan-98,107320,88.33333333333333,High
